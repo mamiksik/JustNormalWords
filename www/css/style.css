@@ -1,0 +1,25 @@
+body{
+	padding-top: 20px;
+
+}
+
+.header {
+	margin-bottom: 30px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #e5e5e5;
+}
+
+.cover{
+	text-align: center;
+}
+
+.container .jumbotron, .container-fluid .jumbotron {
+	border-radius: 0;
+	background: #ffffff;
+	vertical-align: middle;
+}
+
+.panel-footer{
+	font-weight: normal;
+	background: #ffffff;
+}

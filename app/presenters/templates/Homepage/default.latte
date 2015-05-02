@@ -1,0 +1,12 @@
+{block content}
+
+<div class="cover jumbotron">
+	<h1 class="content-heading cover-heading">Prostě normální slova</h1>
+	<p class="content lead">
+		Tvoje prostě normální slovo je <strong>"{$thing->thing}"</strong>!<br>
+		Náhodně vybránáno z clelkem <strong><span id="counter" data-end="{$thingsCount}">0</span></strong> slov.
+	</p>
+	<p><a class="btn btn-lg btn-success" n:href="Homepage:add" role="button">Přidat vlastní prostě normální slovo</a></p>
+</div>
+
+{*control addItem*}

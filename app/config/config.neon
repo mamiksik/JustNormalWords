@@ -1,0 +1,38 @@
+# WARNING: it is CRITICAL that this file & directory are NOT accessible directly via a web browser!
+# http://nette.org/security-warning
+
+parameters:
+
+
+php:
+	date.timezone: Europe/Prague
+
+
+application:
+	errorPresenter: Error
+	mapping:
+		*: Cake\*Module\*Presenter
+
+
+
+
+session:
+	expiration: 14 days
+
+
+
+services:
+	connection:
+			class: LeanMapper\Connection( %database%, ... )
+			setup:
+				- @db.panel::register(@connection)
+	db.panel:
+		class: Dibi\Bridges\Tracy\Panel
+
+	- Cake\Model\Mapper
+	- LeanMapper\DefaultEntityFactory
+
+	#Repository
+	- Cake\Model\ThingRepository
+
+	router: Cake\RouterFactory::createRouter
